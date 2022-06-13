@@ -1,3 +1,37 @@
 <resources>
-    <string name="app_name">Formulario</string>
+    <string name="app_name">Formulacio de regitro</string>
+    <string name="Registration_Form">Formulario de registro</string>
+    <string name="Name">Nombre</string>
+    <string name="last_name">Apellidos</string>
+    <string name="mail">Correo</string>
+    <string name="CC">Documento</string>
+    <string name="Password">Contraseña</string>
+    <string name="Repeat_password">Repita la contraseña</string>
+    <string name="Female">Femenino</string>
+    <string name="Male">Masculino</string>
+    <string name="Hobbies">Pasatiempos</string>
+    <string name="Cook">Cocinar</string>
+    <string name="Write">Escribir</string>
+    <string name="Read">Leer</string>
+    <string name="Sport">Deporte</string>
+    <string name="Born_Date">Fecha de Nacimiento</string>
+    <string name="template_date">dd/mm/yyyy</string>
+    <string name="Born_City">lugar de Nacimiento</string>
+    <string name="save">Registrar</string>
+    <string name="Data">Datos</string>
+
+    <string name="msg_Data">Falta Infromacion</string>
+    <string name="msg_EPassword">Contrasena no identicas</string>
+
+    <string-array name="Cities_list">
+        <item>Bogota</item>
+        <item>Medellin</item>
+        <item>Cali</item>
+        <item>Pereira</item>
+        <item>Barranquilla</item>
+    </string-array>
+
+    <!--plantilla para los comabios en los idiomas, %s son en strings, %d enteros-->
+    <string name="info">Nombre: %s\n Email: %s\n Genero: %s\n Pasatiempos: %s\n Ciudad de Nacimiento: %s\n Fecha de Nacimiento: %s</string>
+
 </resources>

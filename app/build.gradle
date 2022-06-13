@@ -29,6 +29,10 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    viewBinding {// habilito la relacion entre la vista y la actividad
+        enabled = true
+    }
 }
 
 dependencies {
