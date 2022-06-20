@@ -6,6 +6,7 @@ import android.app.Activity
 import android.app.DatePickerDialog
 import android.os.Bundle
 import android.widget.Toast
+import androidx.lifecycle.ViewModelProvider
 import com.alexapps.formulario.R
 import com.alexapps.formulario.databinding.ActivityMainBinding
 import java.text.SimpleDateFormat
@@ -17,15 +18,26 @@ private const val vacio = ""
 class MainActivity : AppCompatActivity() {
 
     private lateinit var mainBinding: ActivityMainBinding // definimos una variable privada de solo la actividad principal
+
+    private lateinit var viewModel: MainViewModel //creo Viewmodel
+
     private var calen = Calendar.getInstance() // Creamos una instancia de calendario, un objeto
     private var borndate = ""
 
     @SuppressLint("SimpleDateFormat")
     override fun onCreate(savedInstanceState: Bundle?) {//creo la actividad
         super.onCreate(savedInstanceState)
+
+        //paso 2
         mainBinding = ActivityMainBinding.inflate(layoutInflater) //iniciamos la variable y me da acceso s los datos en la actividad
         val view = mainBinding.root //la variable view tomara lo que hay en vista de actividad
         setContentView(view)
+
+        //paso 3, ViewModel
+
+        //Parte del view mode
+        viewModel = ViewModelProvider(this)[MainViewModel::class.java]
+        // vinculo a la actividad Viewmode observadores de os live dat
 
         // variable que setea la infomacion seleccionada en el calendario
         val dateSetListener = DatePickerDialog.OnDateSetListener { _, year, month, dayOfMonth ->
@@ -43,8 +55,6 @@ class MainActivity : AppCompatActivity() {
 
         // trabajaremos con los datos en la actividad principal, para eso es el with vitamos poner mainBinding en el resto
         with(mainBinding) {
-
-
             //Activacion del boton fechas llamo a un calendario en forma de dialogo
             bornDateButton.setOnClickListener {
                 //Creamos un cuadro de dialogo, los que salen sobre la actividad
